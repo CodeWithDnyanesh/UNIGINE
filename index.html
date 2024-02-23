@@ -11,8 +11,6 @@
   -->
   <title>Unigine - Epic Games Made For True Gamers!</title>
   <meta name="title" content="Unigine - Epic Games Made For True Gamers!">
-  <meta name="description" content="This is an esports and gaming html template made by codewithsadee">
-
   <!-- 
     - favicon
   -->
@@ -37,6 +35,7 @@
   -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.png">
   <link rel="preload" as="image" href="./assets/images/hero-banner-bg.png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
 
@@ -61,7 +60,11 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#tournament" class="navbar-link" data-nav-link>tournament</a>
+            <a href="#tournament" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#tournament" class="navbar-link" data-nav-link>Media</a>
           </li>
 
           <li class="navbar-item">
@@ -69,7 +72,15 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>contact</a>
+            <a href="#news" class="navbar-link" data-nav-link>Purchase</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#news" class="navbar-link" data-nav-link>Social Media</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link" data-nav-link>Contact Us</a>
           </li>
 
         </ul>
@@ -86,12 +97,26 @@
     </div>
   </header>
 
-
-
-
-
   <main>
     <article>
+      <!-- 
+        - #bg 
+      -->
+      <div class="container-fluid">
+        <div class="hero-banner">
+          <video autoplay muted loop id="myVideo" style="width: 100%;">
+            <source
+              src="assets/images/videos/Riders_Republic__Cinematic_Premiere___Ubisoft_Forward_2020___Ubisoft_[NA](1080p).mp4"
+              style="width: 100%;" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <div class="text-muted">
+          <div id="muteButton" class="mute-button" onclick="toggleMute()">
+            <img id="muteIcon" src="assets/images/unmute.png" alt="Mute">
+          </div>
+        </div>
+        </div>
+      </div>
 
       <!-- 
         - #HERO
@@ -115,18 +140,80 @@
         </div>
       </div>
 
-
-
-
-
       <!-- 
         - #UPCOMING
       -->
 
       <section class="section upcoming" aria-labelledby="upcoming-label" id="tournament">
+        <h2 class="h2 section-title" data-reveal="bottom">
+          Recent <span class="span">Reviews</span>
+        </h2>
+     
         <div class="container">
+          <div class="wrapper">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"> 
+                  <img src="assets/images/carousel1.jpg" />
+                  <div class="swiper-overlay"></div>
+                  <div class="swiper-description">
+                    <h1 class="thecrown">The Crown</h1>
+                    <p class="thecrowndes">Embark on an epic journey in "The Crown," a mesmerizing action-adventure game exclusively crafted for the PlayStation 5.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide"> 
+                  <img src="assets/images/carousel2.jpg" />
+                  <div class="swiper-overlay"></div>
+                  <div class="swiper-description">
+                    <h1 class="thecrown">The Crown</h1>
+                    <p class="thecrowndes">Set in a sprawling fantasy realm teeming with mysteries and dangers, you'll step into the shoes of a young hero destined to reclaim the lost artifact – the legendary Crown of Kings.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide"> 
+                  <img src="assets/images/carousel3.jpg" />
+                  <div class="swiper-overlay"></div>
+                  <div class="swiper-description">
+                    <h1 class="thecrown">The Crown</h1>
+                    <p class="thecrowndes">Unravel the secrets of a richly detailed world as you traverse stunning landscapes, from lush forests to treacherous mountains and ancient ruins.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide"> 
+                  <img src="assets/images/carousel4.jpg" />
+                  <div class="swiper-overlay"></div>
+                  <div class="swiper-description">
+                    <h1 class="thecrown">The Crown</h1>
+                    <p class="thecrowndes">Immersive World: Explore a vast and intricately designed world filled with hidden treasures, ancient secrets, and dynamic environments.</p>
+                  </div>
+                </div>
 
-          <p class="section-subtitle" id="upcoming-label" data-reveal="bottom">
+                <div class="swiper-slide"> 
+                  <img src="assets/images/carousel5.webp" />
+                <div class="swiper-overlay"></div>
+                <div class="swiper-description">
+                  <h1 class="thecrown">The Crown</h1>
+                  <p class="thecrowndes">Player Choice: Shape the outcome of the story through your decisions, forging alliances or facing the consequences of your actions.</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide"> 
+                <img src="assets/images/carousel6.jpg" />
+              <div class="swiper-overlay"></div>
+              <div class="swiper-description">
+                <h1 class="thecrown">The Crown</h1>
+                <p class="thecrowndes">Next-Gen Experience: Harness the power of the PlayStation 5 for stunning visuals, seamless gameplay, and immersive audio.</p>
+              </div>
+            </div>
+
+              </div>
+              <div class="swiper-button-next" style="width: 5%; right: 0; height: 11%;"></div>
+              <div class="swiper-button-prev" style="width: 5%; left: 0; height: 11%;"></div>
+            </div>
+          </div>
+          <p class="section-last-content" data-reveal="bottom">
+            There's much more games in the Games section!  
+            <a href="#" class="GameOnbtn" data-btn>Game On!</a>
+          </p>
+          <!-- <p class="section-subtitle" id="upcoming-label" data-reveal="bottom">
             Upcoming Matches
           </p>
 
@@ -266,7 +353,7 @@
 
             </li>
 
-          </ol>
+          </ol> -->
 
         </div>
       </section>
@@ -439,7 +526,7 @@
     - #FOOTER
   -->
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
 
     <div class="section footer-top">
       <div class="container">
@@ -522,20 +609,20 @@
             <span class="span">Location:</span>
 
             <address class="contact-link">
-              153 Williamson Plaza, Maggieberg, MT 09514
+              Chatrapati Shivaji Maharaj Chowk, Kavathe Mahankal 416405 
             </address>
           </div>
 
           <div class="contact-item">
             <span class="span">Join Us:</span>
 
-            <a href="mailto:Info@unigine.com" class="contact-link">Info@unigine.com</a>
+            <a href="mailto:Info@unigine.com" class="contact-link">dnyan1506@gmail.com</a>
           </div>
 
           <div class="contact-item">
             <span class="span">Phone:</span>
 
-            <a href="tel:+12345678910" class="contact-link">+1 (234) 567-8910</a>
+            <a href="tel:+12345678910" class="contact-link">(+91) 7057970558</a>
           </div>
 
         </div>
@@ -560,7 +647,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 codewithsadee All Rights Reserved.
+          &copy; 2024 Dnyanneshwar Gaikwad | All Rights Reserved.
         </p>
 
       </div>
@@ -604,6 +691,8 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 

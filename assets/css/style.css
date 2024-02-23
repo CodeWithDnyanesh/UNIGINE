@@ -107,7 +107,8 @@
   --transition-1: 250ms ease;
   --transition-2: 500ms ease;
   --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
-
+  --swiper-navigation-color: #fff;
+  --swiper-navigation-size: 1.1em;
 }
 
 
@@ -193,6 +194,14 @@ body {
 \*-----------------------------------*/
 
 .container { padding-inline: 12px; }
+.text-muted {
+  position: absolute;
+  bottom: 128px;
+  right: 0px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .has-before,
 .has-after {
@@ -226,6 +235,12 @@ body {
 .section-title,
 .section-subtitle,
 .section-text { text-align: center; }
+.section-last-content{
+  display: flex;
+  top: 40px;
+  position: relative;
+  justify-content: center;
+}
 
 .section-subtitle {
   color: var(--text-white);
@@ -265,6 +280,36 @@ body {
 }
 
 .btn:is(:hover, :focus-visible)::before { transform: translate(-50%, -50%) scale(1); }
+.GameOnbtn{
+  position: absolute;
+  background-image: var(--gradient-1);
+  color: var(--text-white);
+  font-size: var(--fontSize-6);
+  font-weight: var(--weight-semiBold);
+  max-width: max-content;
+  min-width: 180px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  padding-inline: 30px;
+  clip-path: var(--clip-path-3);
+  overflow: hidden;
+  top: 36px;
+}
+.GameOnbtn::before{
+  content: "";
+  position: absolute;
+  top: var(--top, 50%);
+  left: var(--left, 50%);
+  width: 250%;
+  padding-block-end: 250%;
+  background-color: var(--bg-purple);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: var(--radius-circle);
+  z-index: -1;
+  transition: transform var(--transition-2);
+}
+.GameOnbtn:is(:hover, :focus-visible)::before { transform: translate(-50%, -50%) scale(1); }
 
 .w-100 { width: 100%; }
 
@@ -1065,7 +1110,7 @@ body {
    * HERO
    */
 
-  .hero { padding-block-start: 250px; }
+  /* .hero { padding-block-start: 250px; } */
 
   .hero-banner-bg { transform: scale(1.2); }
 
@@ -1101,4 +1146,84 @@ body {
 
   .footer .logo img { width: 205px; }
 
+}
+
+/* slider */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 33%;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.swiper-slide .swiper-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+.swiper-slide .swiper-description {
+  position: absolute;
+  bottom: 0;
+  padding: 0.5em;
+  color: var(--white);
+  transform: translateY(100vh);
+  transition: transform 0.3s ease;
+}
+.swiper-slide .swiper-description h2 {
+  font-size: 1.5rem;
+}
+.swiper-slide .swiper-description p {
+  font-size: 0.7rem;
+  margin-top: 0.5em;
+}
+
+.swiper-slide:hover .swiper-overlay {
+  opacity: 0.5;
+}
+.swiper-slide:hover .swiper-description {
+  transform: translateY(0);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  padding: 1em;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.swiper-button-next::after {
+  margin-left: 0.2em;
+}
+
+.swiper-slide:not(.swiper-slide-visible) {
+  opacity: 0;
+}
+
+.thecrown{
+  font-size: 26px !important;
+}
+.thecrowndes{
+  font-size: 16px !important;
 }

@@ -1,8 +1,5 @@
 Unigine - Epic Games Made For True Gamers!
 
-This is an esports and gaming html template made by codewithsadee
-
-
 
 #---------- HEADER ----------#
 
@@ -145,7 +142,7 @@ Newsletter Signup
 
 Your Email
 Subscribe Now
-&copy; 2022 codewithsadee All Rights Reserved.
+&copy; 2024 Dnyaneshwar Gaikwad | All Rights Reserved.
 
 
 

@@ -119,3 +119,39 @@ addEventOnElements(hoverElements, "mouseover", function () {
 addEventOnElements(hoverElements, "mouseout", function () {
   cursor.classList.remove("hovered");
 });
+
+//slider
+
+document.addEventListener("DOMContentLoaded", function() {
+  var swiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: 3,
+    effect: "coverflow",
+    coverflowEffect: {
+      rotate: 20,
+      slideShadows: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    }
+  });
+});
+
+// mute button 
+function toggleMute() {
+  var video = document.getElementById("myVideo");
+  var muteIcon = document.getElementById("muteIcon");
+
+  if (video.muted) {
+    video.muted = false;
+    muteIcon.src = "assets/images/unmute.png";
+  } else {
+    video.muted = true;
+    muteIcon.src = "assets/images/mute.png";
+  }
+}
