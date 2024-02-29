@@ -202,7 +202,14 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+.about-bg-muted {
+  position: absolute;
+  bottom: 26px;
+  right: 0px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .has-before,
 .has-after {
   position: relative;
@@ -1226,4 +1233,7 @@ body {
 }
 .thecrowndes{
   font-size: 16px !important;
+}
+.bgabout{
+  width: 100%;
 }
